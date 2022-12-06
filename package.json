@@ -1,0 +1,11 @@
+{
+    "dependencies": {
+      "aws-sdk": "^2.1267.0",
+      "crypto": "^1.0.1",
+      "ejs": "^3.1.8",
+      "express": "^4.18.2",
+      "formidable": "^2.1.1",
+      "fs": "^0.0.1-security",
+      "path": "^0.12.7"
+    }
+}  
