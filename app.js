@@ -45,7 +45,7 @@ app.post('/sendemail', function (req, res) {
     
     const params = {
       MessageBody: fields.email + " " + fields.website,
-      QueueUrl: `https://sqs.us-east-1.amazonaws.com/972976697856/website-viewing-email-queue`
+      QueueUrl: fs.readFileSync("queueurl.txt", "utf8")
     }
 
     sqs.sendMessage(params, function (err, data) {
