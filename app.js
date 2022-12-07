@@ -45,7 +45,7 @@ app.post('/sendemail', function (req, res) {
     
     const params = {
       MessageBody: fields.email + " " + fields.website,
-      QueueUrl: fs.readFileSync("queueurl.txt", "utf8")
+      QueueUrl: fs.readFile("queueurl.txt", "utf8")
     }
 
     sqs.sendMessage(params, function (err, data) {
