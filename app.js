@@ -59,7 +59,7 @@ app.post('/sendemail', function (req, res) {
 })
 
 app.get('*', function (req, res) {
-  const params = {Bucket: "website-uploader-storage", Key: `${req.url.substring(1)}.html`}
+  const params = {Bucket: "bucket-html-files-from-website", Key: `${req.url.substring(1)}.html`}
 
   s3.getObject(params, (err, data) => {
     if (err)  {
